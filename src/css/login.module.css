@@ -1,0 +1,123 @@
+.todo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: var(--verde-claro);
+  font-weight: 300;
+  margin: 3rem;
+}
+
+.card {
+  background-color: var(--dark-grey);
+  width: 70%;
+  height: 60vh;
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1.5fr 1.5fr 1.5fr;
+  position: relative;
+  text-align: center;
+}
+
+.img {
+  grid-area: 1 / 1 / 7 / 2;
+  width: 100%;
+  height: 60vh;
+  position: absolute;
+  object-fit: cover;
+  filter: var(--filter);
+  z-index: 1;
+}
+.quien {
+  grid-area: 1 / 2 / 2 / 3;
+  color: var(--blanco);
+  justify-self: center;
+  align-self: center;
+  font-size: 32px;
+  text-align: start;
+  margin: 1rem 0 0 .5rem;
+  padding: 0.5rem 0.8rem;
+}
+.quien span {
+  color: var(--gris-claro);
+  justify-self: center;
+  align-self: center;
+  font-size: 26px;
+  text-align: start;
+  font-weight: 200;
+}
+
+.form2 {
+  grid-area: 2 / 2 / 2 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.user, .pass {
+  width: 70%;
+  height: 12vh;
+  margin: .5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  background-color: var(--gris-claro);
+}
+
+
+.olvide {
+  color: var(--verde-claro);
+  grid-area: 4 / 2 / 5 / 3;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button {
+  grid-area: 6 / 2 / 7 / 3;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  width: 30%;
+  height: 20%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--blanco);
+  font-size: 1.2rem;
+  font-weight: 200;
+  border: 0.5px solid var(--blanco);
+  cursor: pointer;
+  margin-top: 4rem;
+}
+.button:hover {
+  color: var(--verde-claro);
+  background-color: var(--blanco);
+  border: 0.5px solid var(--background-color);
+  vertical-align: middle;
+}
+
+@media (max-width: 780px) {
+  .quien {
+    font-size: large;
+  }
+  .quien span {
+    font-size: medium;
+  }
+  .ayudar {
+    font-size: large;
+  }
+  .ayudar span {
+    font-size: medium;
+  }
+  .button h1 {
+    font-size: large;
+  }
+}

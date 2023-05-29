@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600;700&display=swap");
+@import "../../node_modules/leaflet/dist/leaflet.css";
+
+
+* {
+  margin: 0;
+  top: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  background-image: var(--background-img);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  font-family: "IBM Plex Serif", serif;
+}
+
+ul {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,64 @@
+.newPost {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--dark-grey);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.newPost h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--blanco);
+}
+
+.newPost label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--blanco);
+}
+
+.newPost input,
+.newPost textarea,
+.newPost select {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--gris-claro);
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.tags {
+  color: var(--blanco);
+  display: flex;
+  justify-content: space-between;
+}
+.tags label{
+  font-weight: 400;
+  font-size: medium;
+  color: var(--background-color);
+}
+.tags input{
+  border-radius: 50%;
+}
+.newPost button[type="submit"] {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+}
+
+.newPost button[type="submit"]:hover {
+  background-color: var(--blanco);
+  color: var(--verde-claro);
+}

@@ -1,0 +1,182 @@
+.todo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: var(--verde-claro);
+  font-weight: 300;
+  margin: 3rem;
+}
+
+.card {
+  background-color: var(--dark-grey);
+  width: 80%;
+  height: 80vh;
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1.5fr repeat(3, 0.7fr) 1.5fr 1.5fr;
+  position: relative;
+  text-align: center;
+  row-gap: 1rem;
+}
+
+.img {
+  grid-area: 1 / 1 / 7 / 2;
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  object-fit: cover;
+  filter: var(--filter);
+  z-index: 1;
+}
+.ayudar {
+  color: var(--gris-claro);
+  grid-area: 5 / 1 / 6 / 2;
+  position: absolute;
+  z-index: 2;
+  justify-self: center;
+  align-self: center;
+  font-size: 36px;
+  text-align: center;
+  padding: 0.5rem;
+}
+.ayudar span {
+  color: var(--verde-claro);
+  justify-self: center;
+  align-self: center;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.quien {
+  grid-area: 1 / 2 / 2 / 3;
+  color: var(--blanco);
+  justify-self: start;
+  align-self: flex-start;
+  font-size: 32px;
+  text-align: start;
+  margin: 1rem 0 0 1rem;
+  padding: 0.5rem 0.8rem;
+}
+.quien span {
+  color: var(--gris-claro);
+  justify-self: center;
+  align-self: center;
+  font-size: 26px;
+  text-align: start;
+  font-weight: 200;
+}
+.form1 {
+  grid-area: 2 / 2 / 3 / 3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nombre {
+  width: 43%;
+  height: 100%;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  background-color: var(--gris-claro);
+  
+}
+.apellido {
+  width: 43%;
+  height: 100%;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  background-color: var(--gris-claro);
+  
+}
+.form2 {
+  grid-area: 3 / 2 / 4 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.email,
+.tel {
+  width: 88%;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  background-color: var(--gris-claro);
+  
+}
+.form3 {
+  grid-area: 4 / 2 / 5 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form4 {
+  grid-area: 5 / 2 / 6 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description {
+  width: 88%;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  background-color: var(--gris-claro);
+  
+}
+.button {
+  grid-area: 6 / 2 / 7 / 3;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  width: 30%;
+  height: 50%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--blanco);
+  font-size: 1.2rem;
+  font-weight: 200;
+  border: 0.5px solid var(--blanco);
+}
+.button span {
+  color: var(--verde-claro);
+  vertical-align: middle;
+  margin: 1rem;
+}
+
+@media (max-width: 780px) {
+  .quien {
+    font-size: large;
+  }
+  .quien span {
+    font-size: medium;
+  }
+  .ayudar {
+    font-size: large;
+  }
+  .ayudar span {
+    font-size: medium;
+  }
+  .button h1 {
+    font-size: large;
+  }
+}

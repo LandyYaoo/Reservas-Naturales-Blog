@@ -1,0 +1,6 @@
+.changeTheme {
+  background-color: transparent;
+  color: var(--blanco);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
