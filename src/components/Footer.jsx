@@ -14,7 +14,7 @@ function Footer() {
         <Link to="/">
           <article className={styles.marca}>
             Reservas <span>Naturales</span>
-            <img src="../../public/assets/logo.svg" alt="" />
+            <img src="../assets/logo.svg" alt="" />
           </article>
         </Link>
         <span className={styles.redes}>

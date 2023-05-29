@@ -50,7 +50,7 @@ function Header() {
           <article className={styleHeader.marca}>
             {" "}
             Reservas <span>Naturales</span>
-            <img src="../../public/assets/logo.svg" alt="" />
+            <img src="../assets/logo.svg" alt="" />
           </article>
         </Link>
 
