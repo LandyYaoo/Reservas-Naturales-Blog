@@ -13,6 +13,7 @@ import Comments from "./components/Comments";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import postsData from "./data/posts";
 import Footer from "./components/Footer";
+import EditPost from "./components/EditPost";
 
 function App() {
   const [posts, setPosts] = useState(postsData);
@@ -45,6 +46,7 @@ function App() {
           <Route path="/new" element={<NewPost />} />
           <Route path="/post/:id" element={<Post />} />
           <Route path="/posts" element={<PostList />} />
+          <Route path="/edit/:id" element={<EditPost />} />
         </Routes>
         <Footer />
       </Router>

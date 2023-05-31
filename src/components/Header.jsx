@@ -12,12 +12,10 @@ function Header() {
     JSON.parse(localStorage.getItem("currentUser"))
   );
 
-  const handleLogin = (user) => {
-    setCurrentUser(user);
-  };
   const handleLogout = () => {
     setCurrentUser(null);
     localStorage.removeItem("currentUser");
+    window.location.reload();
   };
 
   const handleClick = () => {

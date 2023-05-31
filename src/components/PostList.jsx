@@ -3,16 +3,20 @@ import { Link } from "react-router-dom";
 import PostsContext from "../context/PostsContext";
 import styles from "../css/PostList.module.css";
 import Banner from "./Banner";
-import { FaPlusCircle, FaSearchLocation } from "react-icons/fa";
-
+import { FaPlusCircle, FaSearchLocation, FaTrash, FaEdit } from "react-icons/fa";
 
 const PostList = () => {
-  const { posts } = useContext(PostsContext);
+  const { posts, setPosts } = useContext(PostsContext);
   const [searchTerm, setSearchTerm] = useState("");
 
   const storedUser = JSON.parse(localStorage.getItem("currentUser"));
   const userRole = storedUser?.roll;
   const isAdmin = userRole === "admin";
+
+  const handleDelete = (postId) => {
+    const updatedPosts = posts.filter((post) => post.id !== postId);
+    setPosts(updatedPosts);
+  };
 
   return (
     <>
@@ -21,7 +25,7 @@ const PostList = () => {
         titulo="Posts"
       />
       <section className={styles.postList}>
-      <section className={styles.searchBar}>
+        <section className={styles.searchBar}>
           <input
             className={styles.busqueda}
             type="text"
@@ -39,19 +43,42 @@ const PostList = () => {
               post.title.toLowerCase().includes(searchTerm.toLowerCase())
             )
             .map((post) => (
-              <Link
-                to={`/post/${post.id}`}
-                key={post.id}
-                className={styles.postCard}
-              >
-                <img src={post.imageUrl} alt="" />
-                <h3>{post.title}</h3>
-              </Link>
+              <div key={post.id} className={styles.postall}>
+                <Link to={`/post/${post.id}`} className={styles.postCard}>
+                  <img src={post.imageUrl} alt="" />
+                  <h3>{post.title}</h3>
+                </Link>
+                {isAdmin && (
+                  <div className={styles.actions}>
+                    <button
+                      onClick={() => handleDelete(post.id)}
+                      className={styles.delete}
+                    >
+                      <FaTrash size={20} />
+                    </button>
+
+                    
+                      <button
+                        onClick={() => handleEdit(post.id)}
+                        className={styles.edit}
+                      >
+                        <FaEdit size={20} />
+                      </button>
+                    </div>
+                )}
+              </div>
             ))}
         </section>
-        {isAdmin && <Link to={`/new`}><button className={styles.publicar}>Publicar
-        <span><FaPlusCircle size={25}/></span>
-        </button></Link> }
+        {isAdmin && (
+          <Link to={`/new`}>
+            <button className={styles.publicar}>
+              Publicar
+              <span>
+                <FaPlusCircle size={25} />
+              </span>
+            </button>
+          </Link>
+        )}
       </section>
     </>
   );

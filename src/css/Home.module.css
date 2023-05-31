@@ -1,3 +1,6 @@
+.all {
+  display: flex;
+}
 .bannerHome{
   display: flex;
   justify-content: center;
@@ -15,7 +18,7 @@
 }
 .title {
   position: relative;
-  margin-top: 5rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
   color: var(--blanco);
   font-size: 2rem;
@@ -29,8 +32,7 @@
   font-size: 1.2rem;
   padding: 0 20%;
   font-weight: 200;
-  text-align: center;
-  
+  text-align: center; 
   
 }
 .banner{
@@ -59,46 +61,54 @@
   vertical-align: bottom;
 }
 
-.busqueda {
+.bar {
   display: flex;
-  justify-content: space-around;
-  margin: 3rem 0;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  margin: 0rem 0;
+  background-color: var(--verde-oscuro-opaco);
+  backdrop-filter: blur(2px);
+  padding: 1rem 0;
+  position: relative;
 }
-.busqueda h1{
+.bar h1{
   color: var(--blanco);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
+  margin: 0 1rem;
 }
-.searchBar {
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--verde-claro);
-  width: 50vh;
-  height: 6vh;
-  display: flex;
-  border-radius: 1rem;
-  padding: 5px;
+.movingText {
+  position: absolute;
+  white-space: nowrap;
+  animation: slide 10s linear infinite;
 }
-.searchBar input{
-  background-color: var(--verde-claro);
-  margin: 8px;
-  width: 50vh;
-  border-bottom: 1px solid var(--dark-grey);
-  outline: none;
+
+@keyframes slide {
+  0% {
+    transform: translateX(40%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-40%);
+    opacity: 0;
+  }
 }
-.searchBar span{
-  color: var(--background-color);
-  padding: 5px;
-}
+
 .destinos {
-  margin: 2rem 0;
+  margin: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .popularpost{
-  margin: 4rem;
+  margin: 3rem;
   display: grid;
   grid-template-columns: 1fr repeat(2, .4fr);
   grid-template-rows: .3fr repeat(3, .4fr) .3fr;
@@ -139,10 +149,10 @@
 }
 .recientepost{
   display: flex;
+  margin-top: 3rem;
   justify-content: center;
   align-items: center;
   position: relative;
-  flex-wrap: no-wrap;
   
 }
 .titlerecentpost{
@@ -213,12 +223,6 @@
   }
   .imgpost2 { 
     margin-bottom: 1rem;
-  }
-  .searchBar{
-    width: 50%;
-  }
-  .searchBar input{
-    width: 50%;
   }
   .recientepost{
   flex-wrap: wrap;

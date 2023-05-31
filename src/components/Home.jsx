@@ -3,6 +3,7 @@ import styles from "../css/Home.module.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import PostsContext from "../context/PostsContext";
+import React from "react";
 
 function Home() {
   const { posts } = useContext(PostsContext);
@@ -24,7 +25,7 @@ function Home() {
   const recentPosts = getRecentPosts(posts);
 
   return (
-    <section>
+    <section className="all">
       <img
         className={styles.imgHome}
         src="https://images.unsplash.com/photo-1588852656640-48b816317c25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
@@ -45,19 +46,6 @@ function Home() {
             </span>
           </button>
         </Link>
-      </section>
-      <section className={styles.busqueda}>
-        <h1>Encuentra tu destino</h1>
-        <section className={styles.searchBar}>
-          <input
-            className={styles.busqueda}
-            type="text"
-            placeholder="Buscar posts..."
-          />
-          <span>
-            <FaSearchLocation size={25} />
-          </span>
-        </section>
       </section>
       <section className={styles.destinos}>
         <h1 className={styles.title}>DESTINOS POPULARES</h1>
@@ -109,10 +97,10 @@ function Home() {
               className={styles.postCard}
             >
               <img src={post.imageUrl} alt="" />
-              <h3>{post.title}
-              <p>{post.createdAt}</p>
+              <h3>
+                {post.title}
+                <p>{post.createdAt}</p>
               </h3>
-              
             </Link>
           ))}
         </article>

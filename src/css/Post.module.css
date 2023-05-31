@@ -1,5 +1,6 @@
 .postContent {
   display: flex;
+
   margin: 1rem;
 }
 .post {
@@ -57,4 +58,25 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .postContent{
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .post{
+    padding: 1rem;
+  }
+  .post img{
+    width: 100%;
+    height: 300%;
+    object-fit: cover;
+  }
+  .post p{
+    padding: 0;
+  }
+  .end {
+    flex-flow: row wrap;
+  }
 }

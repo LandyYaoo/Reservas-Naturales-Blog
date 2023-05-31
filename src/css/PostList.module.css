@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .searchBar {
@@ -24,14 +25,18 @@
   outline: none;
 }
 .searchBar span{
-  color: var(--background-color);
+  color: var(--dark-grey);
   padding: 5px;
+}
+.busqueda::placeholder {
+  color: var(--dark-grey);
 }
 .postall {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .postCard {
@@ -100,8 +105,31 @@
 .publicar span{
   color: var(--blanco);
 }
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.delete{
+  background-color: rgb(234, 77, 77);
+  width: 2rem;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+.edit{
+  background-color: var(--verde-claro);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
 @media (max-width: 800px) {
   .postCard {
     width: 50%;
+    height: 80%;
+  }
+  .searchBar {
+    width: 80%;
   }
 }

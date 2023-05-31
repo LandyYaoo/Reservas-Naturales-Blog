@@ -112,12 +112,17 @@
     font-size: medium;
   }
   .ayudar {
+    display: none;
     font-size: large;
   }
-  .ayudar span {
-    font-size: medium;
+  .button {
+   width: 50%;
+  height: 20%;
   }
-  .button h1 {
-    font-size: large;
+  .img{
+    width: 100%;
+  }
+  .card {
+    grid-template-columns: .1fr 1fr;
   }
 }
