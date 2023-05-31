@@ -19,7 +19,7 @@ function LogIn(props) {
       const storedUser = JSON.parse(localStorage.getItem("currentUser"));
       props.handleSetCurrentUser(user);
       if (storedUser.roll === "admin") {
-        navigate("/new");
+        navigate("/posts");
       } else {
         navigate("/posts");
       }
