@@ -32,16 +32,16 @@ function Footer() {
       <article className={styles.list}>
         <ul>
           <li>
-            <Link to="/posts">Project</Link>
+            <Link to="/posts">Proyecto</Link>
           </li>
           <li>
-            <Link to="/signup">Community</Link>
+            <Link to="/signup">Communidad</Link>
           </li>
           <li>
-            <Link to="/contacto">Help</Link>
+            <Link to="/contacto">Ayuda</Link>
           </li>
           <li>
-            <Link to="/conocenos">Others</Link>
+            <Link to="/conocenos">Otros</Link>
           </li>
         </ul>
       </article>
