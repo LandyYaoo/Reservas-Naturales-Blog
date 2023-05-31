@@ -7,6 +7,12 @@ usersData.push({
 });
 usersData.push({
   id: 2,
+  username: "user",
+  password: "user",
+  roll: "usuario",
+});
+usersData.push({
+  id: 2,
   username: "leidy",
   password: "1234",
   roll: "usuario",
