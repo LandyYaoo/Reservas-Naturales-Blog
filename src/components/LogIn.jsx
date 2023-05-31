@@ -26,6 +26,7 @@ function LogIn(props) {
     } else {
       alert("Nombre de usuario o Contraseña Invalidos");
     }
+    window.location.reload();
   };
 
   return (
